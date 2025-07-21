@@ -1,0 +1,20 @@
+<!DOCTYPE codename-engine-character>
+<character x="-150" y="150" camx="-250" icon="icon-tailsstarved" camy="-140" scale="1" flipX="true" color="#FF7300" sprite="Starved_Tails">
+	<anim x="0" loop="true" y="0" anim="idle" name="idle"/>
+
+	<anim x="156" name="singLEFTmiss" anim="singRIGHTmiss" y="-43"/>
+
+	<anim x="6" name="singRIGHTmiss" anim="singLEFTmiss" y="-21"/>
+
+	<anim x="75" name="singDOWNmiss" anim="singDOWNmiss" y="-49"/>
+
+	<anim x="67" name="singUPmiss" anim="singUPmiss" y="-2"/>
+
+	<anim x="6" anim="singLEFT" y="-4" name="singRIGHT" indices="2,3,4,5,6,7,8,9,10"/>
+
+	<anim x="90" anim="singDOWN" y="-31" name="singDOWN" indices="2,3,4,5,6,7,8,9,10"/>
+
+	<anim x="162" anim="singRIGHT" y="-17" name="singLEFT" indices="2,3,4,5,6,7,8,9,10"/>
+
+	<anim x="63" anim="singUP" y="36" name="singUP" indices="2,3,4,5,6,7,8,9,10"/>
+</character>

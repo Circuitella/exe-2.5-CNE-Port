@@ -1,0 +1,8 @@
+<!DOCTYPE codename-mod-options>
+<menu name="Sonic Options'" desc="Options for Vs Sonic.exe V2. Includes options for indievidual mods.">
+
+	<menu name="Hud" desc="Kade UI Options.">
+		<checkbox id="kadeUI" desc="Changes the UI into an older version Kade Engine."	name="Kade Engine UI"/>
+		<checkbox id="fastPress" desc="Gives the strum notes higher frames to mimick KE's bot note presses. Kade Engine UI option must be enabled for this to work!" name="Faster note press"/>
+	</menu>
+</menu>

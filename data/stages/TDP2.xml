@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="1.8" name="stage" folder="stages/default/" startCamPosY="600" startCamPosX="1000">
+	<girlfriend alpha="0"/>
+	<dad />
+	<boyfriend alpha="0"/>
+</stage>

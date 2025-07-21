@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.8" name="starved" folder="stages/default/" startCamPosY="600" startCamPosX="1000">
+	<girlfriend alpha="0"/>
+	<dad x="380" y="-400"/>
+	<boyfriend x="100" y="100"/>
+</stage>

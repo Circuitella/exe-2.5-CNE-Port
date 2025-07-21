@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character x="730" icon="tailsdoll" sprite="tailsdoll_p2" camx="20" y="60" scale="1.05" camy="190" color="#FF7300">
+	<anim x="73.3333333333333" y="-47.6190476190476" anim="idle" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13" name="idle"/>
+	<anim x="-50.4761904761905" y="-0.952380952380952" anim="singUP" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" name="singUP"/>
+	<anim x="123.809523809524" y="-162.857142857143" anim="singDOWN" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" name="singDOWN"/>
+	<anim x="273.333333333333" y="-76.1904761904762" anim="singLEFT" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" name="singLEFT"/>
+	<anim x="-291.428571428571" y="-46.6666666666667" anim="singRIGHT" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" name="singRIGHT"/>
+	<anim x="-190.47619047619" y="-219.047619047619" anim="creepysmile" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" name="smile"/>
+	<anim loop="true" x="-190.47619047619" y="-219.047619047619" anim="creepystare" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" name="creepystare"/>
+</character>

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character holdTime="6.1" icon="icon-starved" sprite="Starved" camx="-300" y="190" camy="100" scale="1.3" color="#FF2400">
+	<anim loop="true" anim="Idle" name="idle"/>
+	<anim x="92.3076923076923" y="-61.5384615384615" anim="Left" name="singLEFT"/>
+	<anim x="36.1538461538462" y="107.692307692308" anim="Up" name="singUP"/>
+	<anim x="123.076923076923" y="-84.6153846153846" anim="Down" name="singDOWN"/>
+	<anim x="53.8461538461538" y="-69.2307692307692" anim="Right" name="singRIGHT"/>
+</character>
