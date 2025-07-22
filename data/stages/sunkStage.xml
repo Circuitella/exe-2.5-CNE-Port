@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.77" name="sunkStage" folder="" startCamPosY="0" startCamPosX="0">
+ <combo/>
+ <dad x="385" y="555"/>
+ <boyfriend x="1325" y="535"/>
+ <girlfriend x="700" y="535" scale="0.9"/>
+
+</stage>

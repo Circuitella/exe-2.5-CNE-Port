@@ -1,85 +1,110 @@
+import BGSprite;
+var dadX:Float = 800;
+var dadY:Float = -100;
+var bfX:Float = 1100;
+var bfY:Float = -100;
+var gfX:Float = -80;
+var gfY:Float = 22;
 var daJumpscare:FlxSprite = new FlxSprite(0, 0);
+function onCameraMove(e) {
+	switch (curCameraTarget){
+		case 1: 
+            e.position.set(bfX, bfY);
+		case 0: 
+            e.position.set(dadX, dadY);
+        case 2: 
+            e.position.set(bfX, bfY);
+    }
+}
 function create()
 {
 
-defaultCamZoom = 1.0;
 remove(dad);
 remove(gf);
 remove(combo);
 remove(boyfriend);
-var sSKY:FlxSprite = new FlxSprite(-222, -16 + 150).loadGraphic(Paths.image('stages/PolishedP1/SKY'));
-sSKY.antialiasing = true;
-sSKY.scrollFactor.set(1, 1);
-sSKY.active = false;
-add(sSKY);
+var sky:BGSprite = new BGSprite('PolishedP1/BGSky', -600, -200, 1, 1);
+sky.setGraphicSize(Std.int(sky.width * 1.4));
+add(sky);
 
-var hills:FlxSprite = new FlxSprite(-264, -156 + 150).loadGraphic(Paths.image('stages/PolishedP1/HILLS'));
-hills.antialiasing = true;
-hills.scrollFactor.set(1.1, 1);
-hills.active = false;
+var midTrees1:BGSprite = new BGSprite('PolishedP1/TreesMidBack', -600, -200, 0.7, 0.7);
+midTrees1.setGraphicSize(Std.int(midTrees1.width * 1.4));
+add(midTrees1);
 
-add(hills);
+var treesmid:BGSprite = new BGSprite('PolishedP1/TreesMid', -600, -200,  0.7, 0.7);
+midTrees1.setGraphicSize(Std.int(midTrees1.width * 1.4));
+add(treesmid);
 
-var bg2:FlxSprite = new FlxSprite(-345, -289 + 170).loadGraphic(Paths.image('stages/PolishedP1/FLOOR2'));
-bg2.updateHitbox();
-bg2.antialiasing = true;
-bg2.scrollFactor.set(1.2, 1);
-bg2.active = false;
+var treesoutermid:BGSprite = new BGSprite('PolishedP1/TreesOuterMid1', -600, -200, 0.7, 0.7);
+treesoutermid.setGraphicSize(Std.int(treesoutermid.width * 1.4));
+add(treesoutermid);
 
-add(bg2);
+var treesoutermid2:BGSprite = new BGSprite('PolishedP1/TreesOuterMid2', -600, -200,  0.7, 0.7);
+treesoutermid2.setGraphicSize(Std.int(treesoutermid2.width * 1.4));
+add(treesoutermid2);
 
-var bg:FlxSprite = new FlxSprite(-297, -246 + 150).loadGraphic(Paths.image('stages/PolishedP1/FLOOR1'));
-bg.antialiasing = true;
-bg.scrollFactor.set(1.3, 1);
-bg.active = false;
-add(bg);
+var lefttrees:BGSprite = new BGSprite('PolishedP1/TreesLeft', -600, -200,  0.7, 0.7);
+lefttrees.setGraphicSize(Std.int(lefttrees.width * 1.4));
+add(lefttrees);
 
-var eggman:FlxSprite = new FlxSprite(-218, -219 + 150).loadGraphic(Paths.image('stages/PolishedP1/EGGMAN'));
-eggman.updateHitbox();
-eggman.antialiasing = true;
-eggman.scrollFactor.set(1.32, 1);
-eggman.active = false;
+var righttrees:BGSprite = new BGSprite('PolishedP1/TreesRight', -600, -200, 0.7, 0.7);
+righttrees.setGraphicSize(Std.int(righttrees.width * 1.4));
+add(righttrees);
 
-add(eggman);
+var outerbush:BGSprite = new BGSprite('PolishedP1/OuterBush', -600, -150, 1, 1);
+outerbush.setGraphicSize(Std.int(outerbush.width * 1.4));
+add(outerbush);
 
-var tail:FlxSprite = new FlxSprite(-199 - 150, -259 + 150).loadGraphic(Paths.image('stages/PolishedP1/TAIL'));
-tail.updateHitbox();
-tail.antialiasing = true;
-tail.scrollFactor.set(1.34, 1);
-tail.active = false;
+var outerbush2:BGSprite = new BGSprite('PolishedP1/OuterBushUp', -600, -200, 1, 1);
+outerbush2.setGraphicSize(Std.int(outerbush2.width * 1.4));
+add(outerbush2);
 
-add(tail);
+var grass:BGSprite = new BGSprite('PolishedP1/Grass', -600, -150, 1, 1);
+grass.setGraphicSize(Std.int(grass.width * 1.4));
+add(grass);
 
-var knuckle:FlxSprite = new FlxSprite(185 + 100, -350 + 150).loadGraphic(Paths.image('stages/PolishedP1/KNUCKLE'));
-knuckle.updateHitbox();
-knuckle.antialiasing = true;
-knuckle.scrollFactor.set(1.36, 1);
-knuckle.active = false;
+var deadegg:BGSprite = new BGSprite('PolishedP1/DeadEgg', -600, -200, 1, 1);
+deadegg.setGraphicSize(Std.int(deadegg.width * 1.4));
+deadegg.isGore = true;
+add(deadegg);
 
-add(knuckle);
+var deadknux:BGSprite = new BGSprite('PolishedP1/DeadKnux', -600, -200, 1, 1);
+deadknux.setGraphicSize(Std.int(deadknux.width * 1.4));
+deadknux.isGore = true;
+add(deadknux);
 
-var sticklol:FlxSprite = new FlxSprite(-100, 50);
-sticklol.frames = Paths.getSparrowAtlas('stages/PolishedP1/TailsSpikeAnimated');
-sticklol.animation.addByPrefix('a', 'Tails Spike Animated instance 1', 4, true);
-sticklol.setGraphicSize(Std.int(sticklol.width * 1.2));
-sticklol.updateHitbox();
-sticklol.antialiasing = true;
-sticklol.scrollFactor.set(1.37, 1);
-sticklol.animation.play('a', true);
-add(sticklol);
+var deadtailz:BGSprite = new BGSprite('PolishedP1/DeadTailz', -700, -200, 1, 1);
+deadtailz.setGraphicSize(Std.int(deadtailz.width * 1.4));
+deadtailz.isGore = true;
+add(deadtailz);
+
+var deadtailz1:BGSprite = new BGSprite('PolishedP1/DeadTailz1', -600, -200, 1, 1);
+deadtailz1.setGraphicSize(Std.int(deadtailz1.width * 1.4));
+deadtailz1.isGore = true;
+add(deadtailz1);
+
+var deadtailz2:BGSprite = new BGSprite('PolishedP1/DeadTailz2', -600, -400, 1, 1);
+deadtailz2.setGraphicSize(Std.int(deadtailz2.width * 1.4));
+deadtailz2.isGore = true;
+add(deadtailz2);
+
+fgTrees = new BGSprite('PolishedP1/TreesFG', -610, -200, 1.1, 1.1);
+fgTrees.setGraphicSize(Std.int(fgTrees.width * 1.45));
 
 add(gf);
 add(dad);
 add(boyfriend);
-gf.scrollFactor.set(1.37, 1);
-boyfriend.y += 25;
-dad.y = 150;
-dad.x += 100;
-dad.scale.x = 1.1;
-dad.scale.y = 1.1;
-dad.scrollFactor.set(1.37, 1);
-boyfriend.scrollFactor.set(1.37, 1);
-
+/*
+	"boyfriend": [ 550, -45 ],
+	"girlfriend": [ 100, -45 ],
+	"opponent": [ -250, 0 ]*/
+boyfriend.x += 600;
+boyfriend.y -= 510;
+gf.x += 600;
+gf.y -= 480;
+gf.scrollFactor.set(1,1);
+dad.x += 600;
+dad.y -= 600;
 daJumpscare.frames = Paths.getSparrowAtlas('jumps/sonicJUMPSCARE');
 daJumpscare.animation.addByPrefix('jump', 'sonicSPOOK', 24, false);
 daJumpscare.alpha = 0.0000000000001;

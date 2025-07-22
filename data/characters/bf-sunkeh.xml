@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character icon="bf" camx="140" y="230" camy="10" scale="1" color="#31B0D1" flipX="true" holdTime="5" isPlayer="true" sprite="bf-sunkeh">
+	<anim x="-25" y="-8" anim="singLEFT0" name="singLEFT"/>
+	<anim x="-2" y="-83" anim="singDOWN0" name="singDOWN"/>
+	<anim x="-27" y="6" anim="singRIGHT0" name="singRIGHT"/>
+	<anim x="-46" y="87" anim="singUP0" name="singUP"/>
+	<anim x="-21" anim="singLEFTmiss" name="singLEFTmiss"/>
+	<anim x="10" y="-80" anim="singDOWNmiss" name="singDOWNmiss"/>
+	<anim x="-17" y="9" anim="singRIGHTmiss" name="singRIGHTmiss"/>
+	<anim x="-50" y="87" anim="singUPmiss" name="singUPmiss"/>
+	<anim anim="idle" name="idle"/>
+</character>

@@ -1,16 +1,16 @@
 {
-	"beatsPerMeasure": 4,
-	"opponentModeAllowed": true,
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"bpm": 186,
-	"difficulties": [
-		"normal"
-	],
-	"needsVoices": true,
-	"parsedColor": -16758529,
-	"displayName": "Milk",
+	"opponentModeAllowed": false,
 	"icon": "sunky",
+	"difficulties": [
+		"NORMAL"
+	],
+	"customValues": {},
+	"color": "#000000",
 	"name": "milk",
-	"color": "#0048FF"
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "milk",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 100
 }

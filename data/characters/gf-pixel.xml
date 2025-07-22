@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character antialiasing="false" icon="gf" sprite="characters/Pixel_gf" camx="-20" camy="80" scale="10" color="#A5004D">
+	<anim indices="2,3,4" fps="8" anim="Pixel gf dance0" name="danceLeft"/>
+	<anim indices="6,7,8,0" fps="8" anim="Pixel gf dance0" name="danceRight"/>
+</character>

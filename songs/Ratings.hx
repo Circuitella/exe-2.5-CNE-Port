@@ -1,5 +1,4 @@
 function create() {
-    defaultDisplayCombo = true;
     comboGroup.x = 560;
     comboGroup.y = 290;
 }

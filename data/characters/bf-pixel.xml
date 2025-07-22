@@ -1,14 +1,12 @@
 <!DOCTYPE codename-engine-character>
-<character x="140" icon="bf-pixel" camx="-50"  antialiasing="false"  y="-20" isGF="false" scale="10" camy="-60" color="#2EB3D1" flipX="true" isPlayer="true" sprite="bf-pixel">
-	<anim x="0" loop="false" y="0" fps="24" anim="BF idle dance" name="idle"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE UP0" name="singUP"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE LEFT0" name="singLEFT"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE RIGHT0" name="singRIGHT"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE DOWN0" name="singDOWN"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE UP MISS" name="singUPmiss"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE LEFT MISS" name="singLEFTmiss"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE RIGHT MISS" name="singRIGHTmiss"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF NOTE DOWN MISS" name="singDOWNmiss"/>
-	<anim x="0" loop="false" y="0" fps="24" anim="BF HEY" name="hey"/>
-	<anim x="0" loop="true" y="0" fps="24" anim="BF idle shaking" name="scared"/>
+<character y="350" sprite="BFP" scale="9" antialiasing="false" camx="160" camy="-210" icon="bf-pixel" color="#30B0D1">
+	<anim name="idle" anim="BF idle dance" x="-1.89" y="1.11" fps="12" loop="false"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT0" x="-3.67" y="0.22" fps="12" loop="false"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-2.11" y="1" fps="12" loop="false"/>
+	<anim name="singUP" anim="BF NOTE UP0" x="-4.22" y="0.78" fps="12" loop="false"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-4.11" y="0.33" fps="12" loop="false"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="-4" y="0.33" fps="12" loop="false"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS" x="-3.89" y="0.11" fps="12" loop="false"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-5" y="0.78" fps="12" loop="false"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="-3.89" y="0.22" fps="12" loop="false"/>
 </character>

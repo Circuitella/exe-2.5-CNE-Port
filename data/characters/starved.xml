@@ -1,8 +1,12 @@
 <!DOCTYPE codename-engine-character>
-<character holdTime="6.1" icon="icon-starved" sprite="Starved" camx="-300" y="190" camy="100" scale="1.3" color="#FF2400">
-	<anim loop="true" anim="Idle" name="idle"/>
-	<anim x="92.3076923076923" y="-61.5384615384615" anim="Left" name="singLEFT"/>
-	<anim x="36.1538461538462" y="107.692307692308" anim="Up" name="singUP"/>
-	<anim x="123.076923076923" y="-84.6153846153846" anim="Down" name="singDOWN"/>
-	<anim x="53.8461538461538" y="-69.2307692307692" anim="Right" name="singRIGHT"/>
+<character holdTime="6.1" y="190" camx="-300" sprite="Starved" icon="icon-starved" scale="1.3" camy="100" color="#FF2400">
+	<anim loop="true" name="idle" anim="Idle"/>
+
+	<anim x="182.307692307692" name="singLEFT" anim="Left" y="-81.5384615384615"/>
+
+	<anim x="42.1538461538462" name="singUP" anim="Up" y="127.692307692308"/>
+
+	<anim x="113.076923076923" name="singDOWN" anim="Down" y="-144.615384615385"/>
+
+	<anim x="-26.1538461538462" name="singRIGHT" anim="Right" y="-79.2307692307692"/>
 </character>

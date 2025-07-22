@@ -39,7 +39,7 @@ function postCreate() {
 			text.y = 50;
 			text.cameras = [uiCamera];
 			songL.push(text);
-			var img = new FlxSprite(0,0,Paths.image('menus/freeplay/' + songs[i].displayName));
+			var img = new FlxSprite(0,0,Paths.image('menus/freeplay/' + songs[i].name));
 			img.camera = uiCamera;
 			img.x = 1280 * i - 500;
 			img.y = -720/2.5;

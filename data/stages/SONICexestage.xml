@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.55" name="sonicStage" folder="polishedP1" startCamPosY="0" startCamPosX="0">
+	<girlfriend x="100" y="-45" scrollX="1" scrollY="1"/>
+	<dad x="-250" y="0" scrollX="1" scrollY="1"/>
+	<boyfriend x="500" y="-45" scrollX="1" scrollY="1"/>
+</stage>

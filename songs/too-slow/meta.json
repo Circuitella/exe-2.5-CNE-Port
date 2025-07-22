@@ -1,16 +1,16 @@
 {
-	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"bpm": 135,
+	"icon": "icon-sonicEXE",
 	"difficulties": [
 		"hard"
 	],
-	"needsVoices": true,
-	"parsedColor": -16758529,
-	"displayName": "Too-Slow",
-	"icon": "sonicEXE",
+	"customValues": {},
+	"color": "#0047FF",
 	"name": "too-slow",
-	"color": "#0048FF"
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "Too-Slow",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 135
 }

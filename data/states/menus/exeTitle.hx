@@ -1,8 +1,5 @@
 import funkin.backend.system.framerate.Framerate;
 var canDoShit:Bool = true;
-Framerate.fpsCounter.visible = false;
-Framerate.memoryCounter.visible = false;
-Framerate.codenameBuildField.visible = false;
 
 function new() CoolUtil.playMenuSong();
 

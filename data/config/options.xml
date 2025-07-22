@@ -1,5 +1,6 @@
 <!DOCTYPE codename-mod-options>
 <menu name="Sonic Options'" desc="Options for Vs Sonic.exe V2. Includes options for indievidual mods.">
+		<checkbox id="gore" desc="Toggles Gore On/Off (Ex: Corpses in Too Slow)."	name="Gore"/>
 
 	<menu name="Hud" desc="Kade UI Options.">
 		<checkbox id="kadeUI" desc="Changes the UI into an older version Kade Engine."	name="Kade Engine UI"/>

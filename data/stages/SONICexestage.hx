@@ -1,72 +1,76 @@
+import BGSprite;
+
+var dadX:Float = 1000;
+var dadY:Float = -100;
+var bfX:Float = 1400;
+var bfY:Float = -100;
+var gfX:Float = -80;
+var gfY:Float = 22;
+
 var amongus:Bool = true;
+var pickle:FlxSprite;
+var fgTrees:BGSprite;
+var genesis:FlxTypedGroup<FlxSprite>;
+
+function onCameraMove(e) {
+	switch (curCameraTarget){
+		case 1: 
+            e.position.set(bfX, bfY);
+		case 0: 
+            e.position.set(dadX, dadY);
+        case 2: 
+            e.position.set(bfX, bfY);
+    }
+}
 
 function create(){
 remove(dad);
 remove(gf);
 remove(combo);
 remove(boyfriend);
-defaultCamZoom = .9;
-var sSKY:FlxSprite = new FlxSprite(-414, -440.8).loadGraphic(Paths.image('stages/SonicP2/sky'));
-sSKY.antialiasing = true;
-sSKY.scrollFactor.set(1, 1);
-sSKY.active = false;
-sSKY.scale.x = 1.4;
-sSKY.scale.y = 1.4;
-add(sSKY);
+defaultCamZoom = .75;
+genesis = new FlxTypedGroup();
+var sky:BGSprite = new BGSprite('run/sky', -600, -200, 1.0, 1.0);
+genesis.add(sky);
 
-var trees:FlxSprite = new FlxSprite(-290.55, -298.3).loadGraphic(Paths.image('stages/SonicP2/backtrees'));
-trees.antialiasing = true;
-trees.scrollFactor.set(1.1, 1);
-trees.active = false;
-trees.scale.x = 1.2;
-trees.scale.y = 1.2;
-add(trees);
+var grassback:BGSprite = new BGSprite('run/GrassBack', -600, -200, 1.0, 1.0);
+genesis.add(grassback);
 
-var bg2:FlxSprite = new FlxSprite(-306, -334.65).loadGraphic(Paths.image('stages/SonicP2/trees'));
-bg2.updateHitbox();
-bg2.antialiasing = true;
-bg2.scrollFactor.set(1.2, 1);
-bg2.active = false;
-bg2.scale.x = 1.2;
-bg2.scale.y = 1.2;
-add(bg2);
+var trees:BGSprite = new BGSprite('run/trees', -600, -200, 1.0, 1.0);
+genesis.add(trees);
 
-var bg:FlxSprite = new FlxSprite(-309.95, -240.2).loadGraphic(Paths.image('stages/SonicP2/ground'));
-bg.antialiasing = true;
-bg.scrollFactor.set(1.3, 1);
-bg.active = false;
-bg.scale.x = 1.2;
-bg.scale.y = 1.2;
-add(bg);
+var grass:BGSprite = new BGSprite('run/Grass', -600, -200, 1.0, 1.0);
+genesis.add(grass);
 
-bgspec = new FlxSprite(-428.5 + 50 + 700, -449.35 + 25 + 392 + 105 + 50).loadGraphic(Paths.image("stages/SonicP2/GreenHill"));
-bgspec.antialiasing = false;
-bgspec.scrollFactor.set(1, 1);
-bgspec.active = false;
-bgspec.visible = false;
-bgspec.scale.x = 8;
-bgspec.scale.y = 8;
-add(bgspec);
+var treesfront:BGSprite = new BGSprite('run/TreesFront', -600, -200, 1.0, 1.0);
+genesis.add(treesfront);
+
+var topoverlay:BGSprite = new BGSprite('run/TopOverlay', -600, -200, 1.0, 1.0);
+genesis.add(topoverlay);
+
+pickle = new FlxSprite(-428.5 + 50 + 700, -449.35 + 25 + 392 + 105 + 50).loadGraphic(Paths.image("run/GreenHill"));
+pickle.visible = false;
+pickle.scrollFactor.set(1, 1);
+pickle.active = false;
+pickle.scale.x = 8;
+pickle.scale.y = 8;
+add(genesis);
+add(pickle);
 add(gf);
 add(dad);
 add(boyfriend);
-gf.scrollFactor.set(1.37, 1);
-dad.y -= 125;
-
-boyfriend.x = 1036 - 100;
-boyfriend.y = -100;
-
-dad.scrollFactor.set(1.37, 1);
-boyfriend.scrollFactor.set(1.37, 1);
-
-gf.x = 635.5 - 50 - 100;
-gf.y = 265.1 - 250;
+boyfriend.x += 900;
+boyfriend.y -= 400;
+gf.x += 900;
+gf.y -= 350;
+gf.scrollFactor.set(1,1);
+dad.x += 900;
+dad.y -= 400;
 }
 
 
 function doStaticSign(lestatic:Int = 0, leopa:Bool = true)
 	{
-		trace('static MOMENT HAHAHAH ' + lestatic);
 		var daStatic:FlxSprite = new FlxSprite(0, 0);
 
 		daStatic.frames = Paths.getSparrowAtlas('daSTAT');
@@ -98,11 +102,11 @@ function doStaticSign(lestatic:Int = 0, leopa:Bool = true)
 
 		daStatic.animation.finishCallback = function(pog:String)
 		{
-			trace('ended static');
 			remove(daStatic);
 		}
 	}
-
+var sex:FlxTimer;
+var sex2:FlxTimer;
 function stepHit(curStep)
 {
 var vg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stages/SonicP2/RedVG'));
@@ -125,32 +129,15 @@ case 142, 336, 1296:
 if (curStep == 528) // PIXEL MOMENT LAWLALWALAWL
 {
 doStaticSign(0, false);
-boyfriend.x = 770;
-boyfriend.y = 450;
-boyfriend.setPosition(530 + 100, 170 + 200);
 bgspec.visible = true;
-dad.y = 170 + 300 - 50;
-dad.x = 100;
-gf.x = 400;
-gf.y = -130;
+
 }
 else if (curStep == 784) // BACK TO NORMAL MF!!!
 {
 
 doStaticSign(0, false);
 bgspec.visible = false;
-gf.scrollFactor.set(1.37, 1);
-dad.y = 0;
 
-boyfriend.x = 1036 - 100;
-boyfriend.y = -100;
-
-dad.scrollFactor.set(1.37, 1);
-boyfriend.scrollFactor.set(1.37, 1);
-
-gf.x = 635.5 - 50 - 100;
-gf.y = 265.1 - 250;
-dad.x = 0;
 
 }
 else if (curStep == 521 && curStep == 1160)
@@ -160,8 +147,7 @@ camHUD.shake(0.05, 1);
 }
 else if (curStep == 80 || curStep == 785) // MaliciousBunny did this
 {
-new FlxTimer().start(.085, function(sex:FlxTimer)
-{
+new FlxTimer().start(.085, function(sex:FlxTimer){
     if (curStep >= 528 && curStep <= 784)
         vg.visible = false;
     else

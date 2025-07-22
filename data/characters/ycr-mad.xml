@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character holdTime="6.1" icon="ycr-pissy" sprite="characters/YCR_Mad" camx="-80" y="380" camy="90" scale="1" color="#160D87">
+	<anim x="18" y="-35" anim="laugh_Instance" indices="1,2,3,4,5,6" name="laugh"/>
+	<anim x="360" y="7" anim="scream" name="scream"/>
+	<anim x="18" y="-35" anim="laugh" name="singDOWN-alt"/>
+	<anim x="192" y="32" fps="38" anim="mad_left" name="singLEFT"/>
+	<anim x="-61" y="238" fps="42" anim="mad_up" name="singUP"/>
+	<anim x="-20" y="-26" fps="40" anim="mad_down" name="singDOWN"/>
+	<anim x="-26" fps="35" anim="mad_right" name="singRIGHT"/>
+	<anim loop="true" x="-18" y="67" fps="26" anim="mad_idle" name="idle"/>
+	<anim x="170" y="20" anim="just_die" name="die"/>
+</character>
