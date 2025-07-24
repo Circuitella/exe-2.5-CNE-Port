@@ -1,11 +1,11 @@
 {
 	"opponentModeAllowed": true,
-	"icon": "icon-sonicEXE",
+	"icon": "sonicEXE",
 	"difficulties": [
 		"hard"
 	],
 	"customValues": {},
-	"color": "#0047FF",
+	"color": "#0046FF",
 	"name": "too-slow",
 	"coopAllowed": true,
 	"stepsPerBeat": 4,

@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-stage>
+<stage name="hog" zoom="0.66" startCamPosX="0" startCamPosY="0">
+	<girlfriend alpha="0"/>
+	<dad/>
+	<boyfriend/>
+</stage>

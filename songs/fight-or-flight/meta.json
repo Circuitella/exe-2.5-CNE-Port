@@ -1,6 +1,6 @@
 {
 	"opponentModeAllowed": false,
-	"icon": "icon-starved",
+	"icon": "starved",
 	"difficulties": [
 		"HARD"
 	],

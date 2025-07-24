@@ -1,3 +1,5 @@
 
 vscode-project.hxml
-./duskie source
+/duskie source*
+/illegal-instruction-main*
+/SonicCreepyBundle-main*

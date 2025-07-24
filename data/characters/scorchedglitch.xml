@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-102" icon="scorched" camx="-420" y="-272" scale="2" camy="-30" color="#343B71" holdTime="6.1" sprite="hog/ScorchedGlitch">
+	<anim loop="true" anim="Idle" name="idle"/>
+	<anim x="258.5" y="5" anim="Left" name="singLEFT"/>
+	<anim x="131" y="-217" anim="Down" name="singDOWN"/>
+	<anim x="113.5" y="63" anim="Up" name="singUP"/>
+	<anim x="95.5" y="-125" anim="Right" name="singRIGHT"/>
+</character>

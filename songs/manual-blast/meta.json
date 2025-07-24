@@ -1,0 +1,16 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "hog",
+	"difficulties": [
+		"HARD"
+	],
+	"customValues": {},
+	"color": "#FF0000",
+	"name": "manual-blast",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Manual Blast",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 130
+}
