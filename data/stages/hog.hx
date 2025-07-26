@@ -31,6 +31,7 @@ function onCameraMove(e) {
             defaultCamZoom = 1;
     }
 }
+var monitorAnims:Array<String> = ['idle', 'fatal', 'nmi', 'needle', 'starved'];
 
 function glitchKill(spr:FlxSprite,dontKill:Bool=false){
     FlxFlicker.flicker(spr, 1.5, 0.04, false, false, function(flick:FlxFlicker)
@@ -127,29 +128,32 @@ function create() {
     // glitchThingy.iResolution.value = [FlxG.width, FlxG.height];
     // glitchThingy.enabled.value = [false];
 
-    scorchedBg = new BGSprite('hog/blast/Sunset', -200, 0, 1.1, 0.9);
-    scorchedBg.scale.x = 1.75;
-    scorchedBg.scale.y = 1.75;
+    scorchedBg = new BGSprite('hog/blast/Sunset', 0, 0, 0, 0);
+    scorchedBg.scale.x = 1.5;
+    scorchedBg.scale.y = 1.5;
+    scorchedBg.screenCenter();
     add(scorchedBg);
 
-    scorchedMotain = new BGSprite('hog/blast/Mountains', 0, 0, 1.1, 0.9);
+    scorchedMotain = new BGSprite('hog/blast/Mountains', -130, 0, 0.4, 0.9);
     scorchedMotain.scale.x = 1.5;
     scorchedMotain.scale.y = 1.5;
+    scorchedMotain.x -= 700;
     add(scorchedMotain);
 
     scorchedWaterFalls = new FlxSprite(-1000, 200);
     scorchedWaterFalls.frames = Paths.getSparrowAtlas('hog/blast/Waterfalls');
-    scorchedWaterFalls.animation.addByPrefix('water', 'British instance 1', 12);
+    scorchedWaterFalls.animation.addByPrefix('water', 'British instance 1', 6);
     scorchedWaterFalls.animation.play('water');
     scorchedWaterFalls.scale.x = 1.1;
     scorchedWaterFalls.scale.y = 1.1;
-    scorchedWaterFalls.scrollFactor.set(1, 1);
+    scorchedWaterFalls.scrollFactor.set(0.4, 1);
     add(scorchedWaterFalls);
 
-    scorchedHills = new BGSprite('hog/blast/Hills', -100, 230, 1, 0.9);
+    scorchedHills = new BGSprite('hog/blast/Hills', -100, 0, 0.55, 1);
+    scorchedHills.y += 240;
     add(scorchedHills);
 
-    scorchedMonitor = new FlxSprite(1260, -80);
+    scorchedMonitor = new FlxSprite(1260, 170);
     scorchedMonitor.frames = Paths.getSparrowAtlas('hog/blast/Monitor');
     scorchedMonitor.animation.addByPrefix('idle', 'Monitor', 12, false);
     scorchedMonitor.animation.addByPrefix('fatal', 'Fatalerror', 12, false);
@@ -157,17 +161,18 @@ function create() {
     scorchedMonitor.animation.addByPrefix('needle', 'Needlemouse', 12, false);
     scorchedMonitor.animation.addByPrefix('starved', 'Storved', 12, false);
     scorchedMonitor.animation.play('idle');
-    scorchedMonitor.scrollFactor.set(1, 0.9);
+    scorchedMonitor.scrollFactor.set(0.55, 1);
     add(scorchedMonitor);
     
 
-    scorchedTrees = new BGSprite('hog/blast/Plants', -400, -50, 1, 0.9);
+    scorchedTrees = new BGSprite('hog/blast/Plants', -400, 200, 1, 0.9);
     add(scorchedTrees);
+    scorchedTrees.y += 100;
 
-    scorchedFloor = new BGSprite('hog/blast/Floor', -400, 580, 1, 1);
-    scorchedFloor.scale.x = 1.25;
-    scorchedFloor.scale.y = 1.25;
-    scorchedFloor.y += 1000;
+    scorchedFloor = new BGSprite('hog/blast/Floor', -400, 880, 1, 1);
+    scorchedFloor.scale.x = 2.25;
+    scorchedFloor.scale.y = 2.25;
+    scorchedFloor.y += 1300;
     scorchedFloor.x -= 150;
     add(scorchedFloor);
 
@@ -221,8 +226,8 @@ function create() {
 			FlxTween.color(hogRocks, 15, FlxColor.WHITE, 0xFF1f1f1f);  
 			FlxTween.color(hogOverlay, 15, FlxColor.WHITE, 0xFF1f1f1f);
 		}
-function hyogStuff() 
-    {
+function hyogStuff(){
+
         hogBg.visible = false;
         hogMotain.visible = false;
         hogWaterFalls.visible = false;
@@ -240,8 +245,16 @@ function hyogStuff()
         scorchedTrees.visible = true;
         scorchedFloor.visible = true;
         scorchedRocks.visible = true;
-    }
+}
+function playRandomMonitorAnim() {
+    var anim:String = monitorAnims[FlxG.random.int(0, monitorAnims.length - 1)];
+    scorchedMonitor.animation.play(anim, true);
+}
+function update(){
+   if (!scorchedMonitor.animation.curAnim.finished && scorchedMonitor.visible) return;
 
+    playRandomMonitorAnim(); 
+}
 function stepHit(curStep:Int) {
     switch (curStep)
         {
@@ -255,7 +268,7 @@ function stepHit(curStep:Int) {
                 });
                 blackFuck = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
                 blackFuck.alpha = 0;
-                blackFuck.cameras = [camGame];
+                blackFuck.cameras = [camHUD];
                 blackFuck.scrollFactor.set(0, 0);
                 blackFuck.screenCenter();
                 add(blackFuck);
@@ -270,6 +283,8 @@ function stepHit(curStep:Int) {
                 });
             case 559:
                 camZooming = false;
+            case 775:
+            hyogStuff();    
             case 848:
                 camZooming = true;
                 hogOverlay.visible = false;
@@ -281,12 +296,11 @@ function stepHit(curStep:Int) {
                 });
             case 864:
                 FlxG.camera.flash(FlxColor.BLACK, 2.5);
-                hyogStuff();
                 camHUD.visible = true;
                 camHUD.alpha = 1;
                 camHUD.zoom += 2;
                 useDadZoom = true;
-                dadZoom = 0.34;
+                dadZoom = 0.54;
                 boyfriendZoom = 0.68;
                 // if(ClientPrefs.flashing){
                 //     camGame.setFilters([camGlitchFilter, staticOverlay]);

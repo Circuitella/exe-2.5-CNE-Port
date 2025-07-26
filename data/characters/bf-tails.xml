@@ -1,20 +1,12 @@
 <!DOCTYPE codename-engine-character>
-<character x="-150" y="150" camx="-250" icon="icon-tailsstarved" camy="-140" scale="1" flipX="true" color="#FF7300" sprite="Starved_Tails">
-	<anim x="0" loop="true" y="0" anim="idle" name="idle"/>
-
-	<anim x="156" name="singLEFTmiss" anim="singRIGHTmiss" y="-43"/>
-
-	<anim x="6" name="singRIGHTmiss" anim="singLEFTmiss" y="-21"/>
-
-	<anim x="75" name="singDOWNmiss" anim="singDOWNmiss" y="-49"/>
-
-	<anim x="67" name="singUPmiss" anim="singUPmiss" y="-2"/>
-
-	<anim x="6" anim="singLEFT" y="-4" name="singRIGHT" indices="2,3,4,5,6,7,8,9,10"/>
-
-	<anim x="90" anim="singDOWN" y="-31" name="singDOWN" indices="2,3,4,5,6,7,8,9,10"/>
-
-	<anim x="162" anim="singRIGHT" y="-17" name="singLEFT" indices="2,3,4,5,6,7,8,9,10"/>
-
-	<anim x="63" anim="singUP" y="36" name="singUP" indices="2,3,4,5,6,7,8,9,10"/>
+<character x="-150" y="150" sprite="Starved_Tails" flipX="true" camx="-250" camy="-140" icon="tailsstarved" color="#FF7200">
+	<anim name="idle" anim="idle" x="0" y="0" fps="24" loop="true"/>
+	<anim name="singLEFTmiss" anim="singRIGHTmiss" x="156" y="-43" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="singLEFTmiss" x="6" y="-21" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="singDOWNmiss" x="75" y="-49" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="singUPmiss" x="67" y="-2" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="singLEFT" x="6" y="-4" fps="24" loop="false" indices="2..10"/>
+	<anim name="singDOWN" anim="singDOWN" x="90" y="-31" fps="24" loop="false" indices="2..10"/>
+	<anim name="singLEFT" anim="singRIGHT" x="162" y="-17" fps="24" loop="false" indices="2..10"/>
+	<anim name="singUP" anim="singUP" x="63" y="36" fps="24" loop="false" indices="2..10"/>
 </character>

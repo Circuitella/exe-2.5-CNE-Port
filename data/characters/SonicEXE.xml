@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-character>
-<character x="40" y="140" sprite="SonicEXE" icon="icon-SonicEXE" color="#0047FF" isGF="false">
-	<anim name="idle" anim="SONICmoveIDLE" x="0" y="0" fps="24" loop="true"/>
+<character x="40" y="140" sprite="SonicEXE" icon="SonicEXE" color="#0046FF" isGF="false">
+	<anim name="idle" anim="SONICmoveIDLE" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singUP" anim="SONICmoveUP" x="96" y="104" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="SONICmoveLEFT" x="180" y="26" fps="24" loop="false"/>
 	<anim name="singRIGHT" anim="SONICmoveRIGHT" x="-32" y="60" fps="24" loop="false"/>
